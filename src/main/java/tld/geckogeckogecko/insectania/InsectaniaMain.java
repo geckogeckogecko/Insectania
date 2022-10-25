@@ -29,7 +29,7 @@ import org.slf4j.Logger;
 @Mod(InsectaniaMain.MOD_ID)
 public class InsectaniaMain {
   public static final Logger LOGGER = (Logger) LogManager.getLogger();
-  public static String MOD_ID = "insectania";
+  public static final String MOD_ID = "insectania";
   
   public InsectaniaMain() {
     final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
