@@ -12,18 +12,18 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(InsectaniaMain.MOD_ID)
 public class InsectaniaMain {
-    public static final Logger LOGGER = LogManager.getLogger();
-    public static final String MOD_ID = "insectania";
+  public static final Logger LOGGER = LogManager.getLogger();
+  public static final String MOD_ID = "insectania";
 
-    public InsectaniaMain() {
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ItemInit.ITEMS.register(modEventBus);
-        
-        MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::setup);
-    }
+  public InsectaniaMain() {
+    final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    ItemInit.ITEMS.register(modEventBus);
 
-    private void setup(final FMLCommonSetupEvent event) {
+    MinecraftForge.EVENT_BUS.register(this);
+    modEventBus.addListener(this::setup);
+  }
 
-    }
+  private void setup(final FMLCommonSetupEvent event) {
+
+  }
 }
