@@ -9,9 +9,13 @@ import net.minecraftforge.registries.RegistryObject;
 import tld.geckogeckogecko.insectania.InsectaniaMain;
 
 public class ItemInit {
-  public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, InsectaniaMain.MOD_ID);
+  public static final DeferredRegister<Item> ITEMS = 
+      DeferredRegister.create(ForgeRegistries.ITEMS, InsectaniaMain.MOD_ID);
   
-  public static final RegistryObject<Item> WASP_GRUB_BUCKET = ITEMS.register("wasp_grub_bucket", () -> new Item(new Item.Properties().tab(ModCreativeTab.instance)));
+  public static final RegistryObject<Item> WASP_GRUB_BUCKET = 
+      ITEMS.register("wasp_grub_bucket", () -> new Item(new Item.Properties().tab(ModCreativeTab.instance)));
+  public static final RegistryObject<Item> ANT_HEAD = 
+      ITEMS.register("ant_head", () -> new Item(new Item.Properties()));
   
   public static class ModCreativeTab extends CreativeModeTab {
     public static final ModCreativeTab instance = new ModCreativeTab(CreativeModeTab.TABS.length, "insectania");
@@ -22,7 +26,7 @@ public class ItemInit {
     
     @Override
     public ItemStack makeIcon() {
-      return new ItemStack(WASP_GRUB_BUCKET.get());
+      return new ItemStack(ANT_HEAD.get());
     }
   }
 }
