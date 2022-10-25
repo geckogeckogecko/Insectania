@@ -1,7 +1,9 @@
 package tld.geckogeckogecko.insectania;
 
 import org.apache.logging.log4j.Logger;
+import init.ItemInit;
 import org.apache.logging.log4j.LogManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -15,7 +17,9 @@ public class InsectaniaMain {
 
     public InsectaniaMain() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        ItemInit.ITEMS.register(modEventBus);
+        
+        MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::setup);
     }
 
